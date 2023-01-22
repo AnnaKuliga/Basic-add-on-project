@@ -1,0 +1,16 @@
+.description {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 30px;
+}
+.img-description {
+  width: 250px;
+}
+.triangle {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 25px;
+}
+.gallery img {
+  width: 400px;
+}
