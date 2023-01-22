@@ -1,7 +1,64 @@
+:root {
+  --primary-font: "Poppins", sans-serif;
+  --header-font: "Lora", serif;
+  --hero-font: "Playfair Display", serif;
+  --artistic-font: "Corinthia", cursive;
+  --primary-color: white;
+  --secondary-color: rgba(188, 186, 186, 0.74);
+  --card-color: rgba(255, 253, 253, 0.991);
+}
+body {
+  font-family: var(--primary-font);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--header-font);
+}
+h1 {
+  font-size: 56px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 28px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+h4 {
+  font-size: 20px;
+}
+h3 {
+  font-size: 18px;
+}
+p {
+  font-size: 15px;
+  text-align: justify;
+}
+.container {
+  display: block;
+  max-width: 900px;
+  margin: auto;
+}
+.content h3 {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
 .description {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-gap: 30px;
+}
+.gallery img {
+  width: 250px;
+}
+.hero {
+  margin: 50px 0;
+  padding: 40px 0;
 }
 .img-description {
   width: 250px;
@@ -11,6 +68,11 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 25px;
 }
-.gallery img {
-  width: 400px;
+.theme {
+  text-align: right;
+}
+.theme-button {
+  font-size: 12px;
+  margin: 20px;
+  padding: 10px 15px;
 }
