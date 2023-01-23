@@ -20,7 +20,7 @@
 
 body {
   font-family: var(--primary-font);
-  background-color: rgb(154, 151, 161);
+  background-color: black;
   background-image: linear-gradient(
       rgba(39, 32, 68, 0.3),
       rgba(39, 32, 68, 0.3)
@@ -29,6 +29,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   backdrop-filter: blur(10px);
+  max-width: auto;
+  max-height: auto;
 }
 h1,
 h2,
@@ -66,8 +68,10 @@ footer p {
   text-align: center;
 }
 footer {
+  background-color: black;
   color: var(--card-color);
   height: 100px;
+  padding: 20px;
   width: 100%;
 }
 footer a {
@@ -100,7 +104,7 @@ footer a:hover {
 
 .container {
   display: block;
-  max-width: 900px;
+  max-width: 950px;
   margin: 30px auto;
   padding: 30px 50px;
 }
@@ -160,7 +164,6 @@ footer a:hover {
     url("../images/light-theme.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-
   border-radius: 3px;
   color: var(--secondary-color);
   margin: 50px 0;
@@ -171,6 +174,9 @@ footer a:hover {
   background-color: var(--card-color);
   border-radius: 8px;
   padding: 25px;
+}
+.links {
+  padding-bottom: 30px;
 }
 .img-description {
   width: 250px;
@@ -189,4 +195,25 @@ footer a:hover {
 .theme {
   margin: 30px 0;
   text-align: right;
+}
+@media (max-width: 900px) {
+  body {
+    text-align: center;
+  }
+  h1 {
+    font-size: 23px;
+  }
+  .container {
+    margin-bottom: auto;
+  }
+  .triangle {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+  }
+  .description {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+  }
 }
