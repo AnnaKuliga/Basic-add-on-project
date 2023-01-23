@@ -65,6 +65,18 @@ p {
 footer p {
   text-align: center;
 }
+footer {
+  color: var(--card-color);
+  height: 100px;
+  width: 100%;
+}
+footer a {
+  color: var(--card-color);
+  text-decoration: none;
+}
+footer a:hover {
+  color: var(--primary-color);
+}
 .aperture,
 .iso,
 .shutter {
@@ -74,7 +86,7 @@ footer p {
   margin: 40px 0;
 }
 .button {
-  color: rgb(11, 11, 11);
+  color: var(--card-color);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.5;
@@ -85,12 +97,8 @@ footer p {
   background-color: var(--btn-color);
   text-decoration: none;
 }
-.button-dark {
-  color: var(--card-color);
-}
+
 .container {
-  border: solid rgba(209, 208, 208, 0.854);
-  border-radius: 10px;
   display: block;
   max-width: 900px;
   margin: 30px auto;
@@ -152,13 +160,18 @@ footer p {
     url("../images/light-theme.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: 0 0 15px 15px rgb(155, 149, 158) inset;
+
   border-radius: 3px;
   color: var(--secondary-color);
   margin: 50px 0;
-  padding: 120px 30px 300px;
+  padding: 100px 30px 300px;
 }
-
+.how-it-work,
+.photography {
+  background-color: var(--card-color);
+  border-radius: 8px;
+  padding: 25px;
+}
 .img-description {
   width: 250px;
 }
