@@ -12,7 +12,7 @@
       rgba(39, 32, 68, 0.3),
       rgba(39, 32, 68, 0.3)
     ),
-    url("../images/dark-theme.jpg");
+    url("./images/dark-theme.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   backdrop-filter: blur(15px);
@@ -25,7 +25,7 @@ body {
       rgba(39, 32, 68, 0.3),
       rgba(39, 32, 68, 0.3)
     ),
-    url("../images/light-theme.jpg");
+    url("./images/light-theme.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   backdrop-filter: blur(10px);
@@ -161,7 +161,7 @@ footer a:hover {
       rgba(39, 32, 68, 0.3),
       rgba(39, 32, 68, 0.3)
     ),
-    url("../images/light-theme.jpg");
+    url("./images/light-theme.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 3px;
