@@ -55,8 +55,229 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+
     <title>Photography: my hobby</title>
+    <style>
+      :root {
+        --primary-font: "Poppins", sans-serif;
+        --header-font: "Lora", serif;
+        --hero-font: "Playfair Display", serif;
+        --artistic-font: "Corinthia", cursive;
+        --primary-color: white;
+        --secondary-color: rgba(235, 235, 235, 0.893);
+        --card-color: rgba(255, 255, 255, 0.377);
+      }
+      .dark-theme {
+        background-image: linear-gradient(
+            rgba(39, 32, 68, 0.3),
+            rgba(39, 32, 68, 0.3)
+          ),
+          url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/256/original/dark-theme.jpg?1674548868");
+        background-repeat: no-repeat;
+        background-size: cover;
+        backdrop-filter: blur(15px);
+      }
+
+      body {
+        font-family: var(--primary-font);
+        background-color: black;
+        background-image: linear-gradient(
+            rgba(39, 32, 68, 0.3),
+            rgba(39, 32, 68, 0.3)
+          ),
+          url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/255/original/light-theme.jpg?1674548816");
+        background-repeat: no-repeat;
+        background-size: cover;
+        backdrop-filter: blur(10px);
+        max-width: auto;
+        max-height: auto;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: var(--header-font);
+      }
+      h1 {
+        font-size: 56px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+      }
+      h2 {
+        font-size: 28px;
+        letter-spacing: 3px;
+        opacity: 0.9;
+        text-transform: uppercase;
+      }
+      h4 {
+        font-size: 20px;
+      }
+      h3 {
+        font-size: 18px;
+        opacity: 0.9;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 1.5;
+        text-align: justify;
+      }
+      footer p {
+        text-align: center;
+      }
+      footer {
+        background-color: black;
+        color: var(--card-color);
+        height: 100px;
+        padding: 20px;
+        width: 100%;
+      }
+      footer a {
+        color: var(--card-color);
+        text-decoration: none;
+      }
+      footer a:hover {
+        color: var(--primary-color);
+      }
+      .aperture,
+      .iso,
+      .shutter {
+        background-color: var(--card-color);
+        border-radius: 8px;
+        padding: 25px;
+        margin: 40px 0;
+      }
+      .button {
+        color: var(--card-color);
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.5;
+        text-align: center;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        padding: 16px;
+        background-color: var(--btn-color);
+        text-decoration: none;
+      }
+
+      .container {
+        display: block;
+        max-width: 950px;
+        margin: 30px auto;
+        padding: 30px 50px;
+      }
+      .content h3 {
+        font-size: 12px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+      .description {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 30px;
+        margin: 0 0 30px;
+      }
+
+      .gallery-card {
+        background-color: var(--card-color);
+        border-radius: 8px;
+        margin: 30px 0;
+        padding-top: 50px;
+        text-align: center;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        padding: 60px;
+      }
+      .gallery img {
+        border-radius: 5px;
+        max-width: 100%;
+        transition: all 150ms ease-in-out;
+      }
+      .gallery img:hover {
+        filter: grayscale(60%);
+        transform: scale(1.2);
+      }
+      .gallery .intro-picture {
+        border-radius: 10px;
+        max-width: 100%;
+        transition: all 150ms ease-in-out;
+      }
+
+      .grid-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 10px;
+      }
+
+      .hero {
+        background-image: linear-gradient(
+            rgba(39, 32, 68, 0.3),
+            rgba(39, 32, 68, 0.3)
+          ),
+          url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/255/original/light-theme.jpg?1674548816");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 3px;
+        color: var(--secondary-color);
+        margin: 50px 0;
+        padding: 100px 30px 300px;
+      }
+      .how-it-work,
+      .photography {
+        background-color: var(--card-color);
+        border-radius: 8px;
+        padding: 25px;
+      }
+      .links {
+        padding-bottom: 30px;
+      }
+      .img-description {
+        width: 250px;
+      }
+      .intro-picture:hover {
+        transform: scale(1);
+      }
+      .learn-more {
+        text-align: center;
+      }
+      .triangle {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 25px;
+      }
+      .theme {
+        margin: 30px 0;
+        text-align: right;
+      }
+      @media (max-width: 900px) {
+        body {
+          text-align: center;
+        }
+        h1 {
+          font-size: 23px;
+        }
+        .container {
+          margin-bottom: auto;
+        }
+        .triangle {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-gap: 5px;
+        }
+        .description {
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-gap: 5px;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -87,7 +308,7 @@
         </div>
         <div>
           <img
-            src="images/img-description.png"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/254/original/img-description.png?1674548724"
             alt="Image of a camera"
             class="img-description"
           />
@@ -156,7 +377,7 @@
               title="Tobias Bjorkli Pexels"
             >
               <img
-                src="images/Tobias (1).jpg"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/266/original/Tobias_%281%29.jpg?1674549171"
                 alt="Picture of Norway"
                 title="Norwegian landscape"
                 class="intro-picture"
@@ -166,63 +387,61 @@
           <div class="grid-row">
             <div>
               <img
-                src="images/Tobias (8).jpg"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/265/original/Tobias_%288%29.jpg?1674549134"
                 alt="Picture of Norway"
                 title="Norwegian landscape"
               />
             </div>
             <div>
               <img
-                src="images/Tobias (4).jpg"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/264/original/Tobias_%284%29.jpg?1674549115"
                 alt="Picture of Norway"
                 title="Norwegian landscape"
               />
             </div>
             <div>
               <img
-                src="images/Tobias (5).jpg"
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/263/original/Tobias_%285%29.jpg?1674549101
+              alt="Picture of Norway" title="Norwegian landscape" />
+            </div>
+            <div>
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/262/original/Tobias_%282%29.jpg?1674549057"
                 alt="Picture of Norway"
                 title="Norwegian landscape"
               />
             </div>
             <div>
               <img
-                src="images/Tobias (2).jpg"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/261/original/Tobias_%286%29.jpg?1674549043"
                 alt="Picture of Norway"
                 title="Norwegian landscape"
               />
             </div>
             <div>
               <img
-                src="images/Tobias (6).jpg"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/260/original/Tobias_%287%29.jpg?1674549026"
                 alt="Picture of Norway"
                 title="Norwegian landscape"
               />
             </div>
             <div>
               <img
-                src="images/Tobias (7).jpg"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/257/original/1.oslo_city.jpg?1674548915"
                 alt="Picture of Norway"
                 title="Norwegian landscape"
               />
             </div>
             <div>
               <img
-                src="images/1.oslo_city.jpg"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/258/original/2.bergen_city.jpg?1674548933"
                 alt="Picture of Norway"
                 title="Norwegian landscape"
               />
             </div>
             <div>
               <img
-                src="images/2.bergen_city.jpg"
-                alt="Picture of Norway"
-                title="Norwegian landscape"
-              />
-            </div>
-            <div>
-              <img
-                src="images/3.trondheim_city.jpg"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/259/original/3.trondheim_city.jpg?1674548954"
                 alt="Picture of Norway"
                 title="Norwegian landscape"
               />
@@ -279,6 +498,18 @@
         </div>
       </div>
     </footer>
-    <script src="app.js"></script>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        if (body.classList.contains("dark-theme")) {
+          body.classList.remove("dark-theme");
+        } else {
+          body.classList.add("dark-theme");
+        }
+      }
+
+      let themeButton = document.querySelector("#theme-btn");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
   </body>
 </html>
